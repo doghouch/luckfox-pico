@@ -28,6 +28,7 @@ adduser luckfox lpadmin
 adduser root lpadmin # testing
 
 # add hp lib deps + hplib
+setup-apkrepos -c # enable community repo
 apk add ghostscript py3-reportlab libjpeg net-snmp
 apk add hplip
 
