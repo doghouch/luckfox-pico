@@ -2,6 +2,9 @@
 
 # Install base
 apk update
+
+echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
+
 apk add openrc
 rc-update add devfs boot
 rc-update add procfs boot
@@ -28,7 +31,7 @@ adduser root lpadmin # testing
 
 # add hp lib deps + hplib
 apk add ghostscript py3-reportlab libjpeg net-snmp
-apk add hplip
+apk add hplip@testing
 
 # Clear apk cache
 rm -rf /var/cache/apk/*
