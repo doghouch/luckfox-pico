@@ -28,10 +28,8 @@ adduser luckfox lpadmin
 adduser root lpadmin # testing
 
 # add hp lib deps + hplib
-apk add alpine-conf # add setup-apkrepos
-setup-apkrepos -c # enable community repo
 apk add ghostscript py3-reportlab libjpeg net-snmp
-apk add hplip
+apk add hplip --repository=https://dl-cdn.alpinelinux.org/alpine/v3.22/community/ 
 
 # Clear apk cache
 rm -rf /var/cache/apk/*
