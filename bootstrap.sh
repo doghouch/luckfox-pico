@@ -21,6 +21,16 @@ apk del -r shadow
 apk add dropbear mtd-utils-ubi btop unudhcpd --no-cache
 rc-update add dropbear default
 
+# install cups
+apk add cups cups-filters
+rc-update add cupsd # start automatically
+adduser luckfox lpadmin
+adduser root lpadmin # testing
+
+# add hp lib deps + hplib
+apk add ghostscript py3-reportlab libjpeg net-snmp
+apk add hplip
+
 # Clear apk cache
 rm -rf /var/cache/apk/*
 
