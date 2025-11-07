@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - "main" # For upstreaming
-      - "senpai" # My own development
+      #- "senpai" # My own development
 jobs:
   build-rootfs:
     runs-on: ubuntu-latest
